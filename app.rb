@@ -2,6 +2,7 @@ require_relative 'config/environment'
 
 class App < Sinatra::Base
   # Write your code here!
+  #accepts a name and renders the name backwards
   get "/reversename/:name" do
     @reversename = params[:name].reverse!
     "#{@reversename}"
@@ -14,15 +15,21 @@ class App < Sinatra::Base
   end
 
   get "/square/:number" do
+    #accepts a number and returns the square of that number
     @squared = params[:number].to_i ** 2
     "#{@squared}"
   end
 
-  get '/say/:number/:phrase' do
+  get "/say/:number/:phrase" do
+    #accepts a number and a phrase and returns that phrase in a string the number of times given
     @num = params[:number].to_i
     @string = params[:phrase].to_s
     @phrases = @string * @num
     "#{@phrases}"
-  end 
+  end
+
+  get "/say/:word1/:word2/:word3/:word4/:word5" do
+    #accepts five words and returns a string containing all five words
+    @words = params[:word1], params[:word2], params[:word2], params[:word2], params[:word2]
 
 end
