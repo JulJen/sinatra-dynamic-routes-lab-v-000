@@ -35,7 +35,7 @@ class App < Sinatra::Base
     @words = params[:word1], params[:word2], params[:word3], params[:word4], params[:word5]
     # @sentence = @words.reject(&:empty?).join(' ')
     @sentence = @words.reject{|s| s.empty?}.join(' ') << "."
-    "#{@sentence}."
+    # "#{@sentence}."
 
     # @sentence = "#{params[:word1]} #{params[:word2]} #{params[:word3]} #{params[:word4]} #{params[:word5]}."
     #
