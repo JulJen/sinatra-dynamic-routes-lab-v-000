@@ -23,5 +23,6 @@ class App < Sinatra::Base
     # @string = params[:phrase].to_s
     @phrases = params[:number].to_i * params[:phrase].to_s
     "#{@phrases}"
+  end 
 
 end
