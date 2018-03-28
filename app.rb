@@ -32,6 +32,7 @@ class App < Sinatra::Base
     #accepts five words and returns a string containing all five words
     @words = params[:word1], params[:word2], params[:word3], params[:word4], params[:word5]
     @sentence = @words.join(' ')
+    "#{@sentence}."
   end
 
     # get "/:operation/:number1/:number2" do
