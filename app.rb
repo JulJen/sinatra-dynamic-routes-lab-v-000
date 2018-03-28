@@ -14,11 +14,13 @@ class App < Sinatra::Base
     # end
   end
 
+
   get "/square/:number" do
     #accepts a number and returns the square of that number
     @squared = params[:number].to_i ** 2
     "#{@squared}"
   end
+
 
   get "/say/:number/:phrase" do
     #accepts a number and a phrase and returns that phrase in a string the number of times given
@@ -27,18 +29,21 @@ class App < Sinatra::Base
     @phrase = @string * @num
   end
 
+
   get "/say/:word1/:word2/:word3/:word4/:word5" do
     #accepts five words and returns a string containing all five words
-    @sentence = "#{params[:word1]} #{params[:word2]} #{params[:word3]} #{params[:word4]} #{params[:word5]}."
+    @words = params[:word1], params[:word2], params[:word3], params[:word4], params[:word5]
+    @sentence = @words.join(' ')
 
     if @sentence.to_s != nil
-      "#{@sentence}"
+    "#{@sentence}."
+
+    # @sentence = "#{params[:word1]} #{params[:word2]} #{params[:word3]} #{params[:word4]} #{params[:word5]}."
+    # 
+    # if @sentence.to_s != nil
+    #   "#{@sentence}"
     end
   end
-    #
-    # @words = params[:word1], params[:word2], params[:word3], params[:word4], params[:word5]
-    # @sentence = @words.join(' ')
-    # "#{@sentence}."
 
 
     get "/:operation/:number1/:number2" do
