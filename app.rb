@@ -22,7 +22,7 @@ class App < Sinatra::Base
     @num = params[:number].to_i
     @string = params[:phrase].to_s
     @num.times do |i|
-      @phrases = "#{@string} * #{i}"
+      @phrases = @string * "#{i}"
       "#{@phrases}"
     end
   end
