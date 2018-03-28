@@ -46,6 +46,4 @@ class App < Sinatra::Base
     # end
       #accepts an operation (add, subtract, multiply or divide) and performs the operation on the two numbers provided
 
-    end
-
 end
