@@ -4,8 +4,8 @@ class App < Sinatra::Base
   # Write your code here!
   #accepts a name and renders the name backwards
   get "/reversename/:name" do
-    reversename = params[:name].reverse!
-    "#{reversename}"
+    @reversename = params[:name].reverse!
+    # "#{reversename}"
     # @name = params[:name].split('')
     # reverse = []
     #
