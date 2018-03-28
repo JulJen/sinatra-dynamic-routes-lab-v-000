@@ -6,8 +6,6 @@ class App < Sinatra::Base
   get "/reversename/:name" do
     @reverse = params[:name].reverse!
     #
-    # "#{reverse}"
-    #
     # @name = params[:name].split('')
     # reverse = []
     #
@@ -27,15 +25,11 @@ class App < Sinatra::Base
     @num = params[:number].to_i
     @string = params[:phrase].to_s
     @phrase = @string * @num
-    #
-    # "#{phrase}"
   end
 
   get "/say/:word1/:word2/:word3/:word4/:word5" do
     #accepts five words and returns a string containing all five words
     @sentence = "#{params[:word1]} #{params[:word2]} #{params[:word3]} #{params[:word4]} #{params[:word5]}."
-    #
-    # "#{sentence}"
     #
     # @words = params[:word1], params[:word2], params[:word3], params[:word4], params[:word5]
     # @sentence = @words.join(' ')
