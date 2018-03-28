@@ -37,11 +37,13 @@ class App < Sinatra::Base
     "#{sentence}"
   end
 
-    get "/:operation/:number1/:number2" do
-      @num1 = params[:number1].to_i
-      @num2 = params[:number2].to_i
-      @operation = params[:operation]
-      if
+    # get "/:operation/:number1/:number2" do
+    #   @num1 = params[:number1].to_i
+    #   @num2 = params[:number2].to_i
+    #   @operation = params[:operation]
+    #   if
+    #   end
+    # end
       #accepts an operation (add, subtract, multiply or divide) and performs the operation on the two numbers provided
 
     end
