@@ -37,9 +37,9 @@ class App < Sinatra::Base
     "#{@sentence}"
   end
 
-    # get "/:operation/:number1/:number2" do
-    #   #accepts an operation (add, subtract, multiply or divide) and performs the operation on the two numbers provided
-    #
-    # end
+    get "/:operation/:number1/:number2" do
+      #accepts an operation (add, subtract, multiply or divide) and performs the operation on the two numbers provided
+
+    end
 
 end
