@@ -42,7 +42,7 @@ class App < Sinatra::Base
     #
     # if @sentence.to_s != nil
     #   "#{@sentence}"
-    end
+    # end
   end
 
 
