@@ -22,9 +22,9 @@ class App < Sinatra::Base
 
   get "/say/:number/:phrase" do
     #accepts a number and a phrase and returns that phrase in a string the number of times given
-    num = params[:number].to_i
-    string = params[:phrase].to_s
-    @phrase = string * num
+    @num = params[:number].to_i
+    @string = params[:phrase].to_s
+    @phrase = @string * @num
   end
 
   get "/say/:word1/:word2/:word3/:word4/:word5" do
@@ -43,12 +43,12 @@ class App < Sinatra::Base
 
     get "/:operation/:number1/:number2" do
       # accepts an operation (add, subtract, multiply or divide) and performs the operation on the two numbers provided
-      @num1 = params[:number1].to_i
-      @num2 = params[:number2].to_i
+      @num1 = params[:number1]
+      @num2 = params[:number2]
       operation = params[:operation]
       answer = []
 
-      while @num1 != nil && @num2 != nil
+      while @num1.to_i != nil && @num2.to_i != nil
         if operation == 'add'
           answer << @num1 + @num2
         elsif operation == 'subtract'
