@@ -34,12 +34,12 @@ class App < Sinatra::Base
     if @sentence.to_s != nil
       "#{@sentence}"
     end
+  end
     #
     # @words = params[:word1], params[:word2], params[:word3], params[:word4], params[:word5]
     # @sentence = @words.join(' ')
     # "#{@sentence}."
 
-  end
 
     get "/:operation/:number1/:number2" do
       # accepts an operation (add, subtract, multiply or divide) and performs the operation on the two numbers provided
