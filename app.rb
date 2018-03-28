@@ -34,7 +34,7 @@ class App < Sinatra::Base
     #accepts five words and returns a string containing all five words
     @words = params[:word1], params[:word2], params[:word3], params[:word4], params[:word5]
     # @sentence = @words.reject(&:empty?).join(' ')
-    @sentence = @words.reject{|s| s.empty?}.join(' ')
+    @sentence = @words.reject{|s| s.empty?}.join(' ') << "."
     "#{@sentence}."
 
     # @sentence = "#{params[:word1]} #{params[:word2]} #{params[:word3]} #{params[:word4]} #{params[:word5]}."
